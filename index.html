@@ -64,7 +64,7 @@
           <div class="overlay">
             <div class="container hero-text">
               <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-              <button type="button" class="button order-button">
+              <button type="button" class="button order-button" data-modal-open>
                 Замовити послугу
               </button>
             </div>
@@ -130,28 +130,37 @@
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="list card-list">
             <li class="card">
-              <img
-                src="./images/coding.jpg"
-                alt="Верстка"
-                width="370"
-                height="294"
-              />
+              <div class="activity-item">
+                <img
+                  src="./images/coding.jpg"
+                  alt="Верстка"
+                  width="370"
+                  height="294"
+                />
+                <p class="activity-text" lang="uk">Десктопні додатки</p>
+              </div>
             </li>
             <li class="card">
-              <img
-                src="./images/styling.jpg"
-                alt="Стилізація"
-                width="370"
-                height="294"
-              />
+              <div class="activity-item">
+                <img
+                  src="./images/styling.jpg"
+                  alt="Стилізація"
+                  width="370"
+                  height="294"
+                />
+                <p class="activity-text" lang="uk">Мобільні додатки</p>
+              </div>
             </li>
             <li class="card">
-              <img
-                src="./images/optimize.jpg"
-                alt="Оптимізація"
-                width="370"
-                height="294"
-              />
+              <div class="activity-item">
+                <img
+                  src="./images/optimize.jpg"
+                  alt="Оптимізація"
+                  width="370"
+                  height="294"
+                />
+                <p class="activity-text" lang="uk">Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -412,7 +421,7 @@
                 href=""
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                class="client-link"
+                class="link client-link"
               >
                 <svg class="client-logo">
                   <use href="./images/icons/symbol-defs.svg#client-1"></use>
@@ -424,7 +433,7 @@
                 href=""
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                class="client-link"
+                class="link client-link"
               >
                 <svg class="client-logo">
                   <use href="./images/icons/symbol-defs.svg#client-2"></use>
@@ -436,7 +445,7 @@
                 href=""
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                class="client-link"
+                class="link client-link"
               >
                 <svg class="client-logo">
                   <use href="./images/icons/symbol-defs.svg#client-3"></use>
@@ -448,7 +457,7 @@
                 href=""
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                class="client-link"
+                class="link client-link"
               >
                 <svg class="client-logo">
                   <use href="./images/icons/symbol-defs.svg#client-4"></use>
@@ -460,7 +469,7 @@
                 href=""
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                class="client-link"
+                class="link client-link"
               >
                 <svg class="client-logo">
                   <use href="./images/icons/symbol-defs.svg#client-5"></use>
@@ -472,7 +481,7 @@
                 href=""
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                class="client-link"
+                class="link client-link"
               >
                 <svg class="client-logo">
                   <use href="./images/icons/symbol-defs.svg#client-6"></use>
@@ -569,5 +578,11 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-btn" data-modal-close></button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
