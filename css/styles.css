@@ -31,7 +31,8 @@ html {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   transition-property: background-color, transform;
-  transition: var(--std-timing);
+  transition: background-color var(--std-timing) var(--std-time-func),
+    transform var(--std-timing) var(--std-time-func);
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1);
@@ -42,7 +43,8 @@ html {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition-property: transform, box-shadow;
-  transition: transform var(--std-timing) var(--std-time-func);
+  transition: transform var(--std-timing) var(--std-time-func),
+    box-shadow var(--std-timing) var(--std-time-func);
 
   min-width: 528px;
   min-height: 581px;
@@ -89,7 +91,9 @@ img {
   text-decoration: none;
   color: inherit;
   transition-property: color, background-color, box-shadow, transform;
-  transition: var(--std-timing) var(--std-time-func);
+  transition: background-color var(--std-timing) var(--std-time-func),
+    box-shadow var(--std-timing) var(--std-time-func),
+    transform var(--std-timing) var(--std-time-func);
 }
 .subtitle {
   margin: 0;
@@ -573,7 +577,8 @@ img {
   border-radius: 4px;
   border-color: transparent;
   transition-property: color, background-color, box-shadow;
-  transition: var(--std-timing) var(--std-time-func);
+  transition: background-color var(--std-timing) var(--std-time-func),
+    box-shadow var(--std-timing) var(--std-time-func);
 }
 .button:hover,
 .button:focus {
