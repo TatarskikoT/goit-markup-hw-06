@@ -30,6 +30,7 @@ html {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  transition-property: background-color, transform;
   transition: var(--std-timing);
 }
 .backdrop.is-hidden .modal {
@@ -40,6 +41,7 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
+  transition-property: transform, box-shadow;
   transition: transform var(--std-timing) var(--std-time-func);
 
   min-width: 528px;
@@ -86,6 +88,7 @@ img {
 .link {
   text-decoration: none;
   color: inherit;
+  transition-property: color, background-color, box-shadow, transform;
   transition: var(--std-timing) var(--std-time-func);
 }
 .subtitle {
@@ -299,10 +302,13 @@ img {
 }
 .activity-text {
   position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   bottom: 0;
   width: 100%;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  height: 70px;
   margin: 0;
 
   font-weight: 700;
@@ -314,6 +320,9 @@ img {
   background-color: rgba(47, 48, 58, 0.8);
 }
 /* ---------------------team----------------------- */
+.section.team {
+  background-color: var(--secondary-white-color);
+}
 .team .card {
   padding-bottom: 30px;
 }
@@ -327,14 +336,11 @@ img {
   padding-bottom: 30px;
 }
 .team {
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
 
   font-size: 16px;
   line-height: calc(19 / 16);
-
-  background-color: var(--secondary-white-color);
 }
 .team .subtitle {
   font-weight: 500;
@@ -566,6 +572,7 @@ img {
   background-color: var(--secondary-white-color);
   border-radius: 4px;
   border-color: transparent;
+  transition-property: color, background-color, box-shadow;
   transition: var(--std-timing) var(--std-time-func);
 }
 .button:hover,
