@@ -580,6 +580,32 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
+        <form action="" class="form registration">
+          <p class="tagline">Залиште свої дані, ми вам передзвонимо</p>
+          <div class="form-field">
+            <label for="name">Ім'я</label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div class="form-field">
+            <label for="tel">Телефон</label>
+            <input type="tel" name="tel" id="tel" />
+          </div>
+          <div class="form-field">
+            <label for="email">Пошта</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="form-field">
+            <label for="comment">Коментар</label>
+            <textarea
+              name="comment"
+              id="comment"
+              rows="10"
+              placeholder="Введіть текст"
+            ></textarea>
+          </div>
+          <div class="form-field"></div>
+          <button type="submit">Відправити</button>
+        </form>
         <button class="close-btn" data-modal-close></button>
       </div>
     </div>
