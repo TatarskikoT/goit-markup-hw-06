@@ -35,6 +35,8 @@ html {
     transform var(--std-timing) var(--std-time-func);
 }
 .backdrop.is-hidden .modal {
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%) scale(1);
 }
 .modal {
@@ -134,11 +136,44 @@ textarea {
   border-radius: 50%;
   background-color: var(--primary-white-color);
 
-  background-image: url(../images/icons/close-black-18dp.svg);
+  /* background-image: url(../images/icons/close-black-18dp.svg);
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  transition-property: color;
+  transition: var(--std-timing) var(--std-time-func);
 }
+.modal ~ .button {
+  min-width: 200px;
+  min-height: 50px;
+}
+.close-btn .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-16%, -16%);
 
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}
+.close-btn:hover,
+.close-btn:focus {
+  cursor: pointer;
+  color: var(--accent-color);
+}
+.for-my-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 body {
   font-family: "Roboto", Verdana, sans-serif;
   font-size: 14px;

@@ -632,15 +632,23 @@
             ></textarea>
           </label>
           <div class="form-field agreement">
-            <input type="checkbox" name="agreement" />
+            <input type="checkbox" class="checkbox" name="agreement" />
             <p class="agreement-text">
               Погоджуюся з розсилкою та приймаю
               <a href="" class="agreement-link"> Умови договору</a>
             </p>
           </div>
-          <button class="submit" type="submit">Відправити</button>
+          <div class="for-my-button">
+            <button class="button order-button" type="submit">
+              Відправити
+            </button>
+          </div>
         </form>
-        <button class="close-btn" data-modal-close></button>
+        <button class="close-btn" data-modal-close>
+          <svg class="icon">
+            <use href="./images/icons/icons.svg#close"></use>
+          </svg>
+        </button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
