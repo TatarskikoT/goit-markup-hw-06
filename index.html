@@ -577,16 +577,18 @@
           </ul>
         </div>
         <div class="footer-div subscribe-div">
-          <form action="" class="subscribe-form">
+          <form class="subscribe-form">
             <h2 class="footer-title">Підпишіться на розсилку</h2>
-            <div class="form-field subscribe">
-              <input
-                class="subscribe-email"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="E-mail"
-              />
+            <div class="subscribe-sub-div">
+              <label class="subscribe">
+                <input
+                  class="subscribe-email"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="E-mail"
+                />
+              </label>
               <button class="button order-button" type="submit">
                 Підписатися
                 <svg class="icon">
@@ -600,30 +602,30 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <form action="" class="form registration">
+        <form class="form registration">
           <h2 class="title">Залиште свої дані, ми вам передзвонимо</h2>
-          <label class="form-field" for="name">
+          <label class="form-field">
             Ім'я
             <svg class="icon">
               <use href="./images/icons/icons.svg#person"></use>
             </svg>
             <input type="text" name="name"
           /></label>
-          <label class="form-field" for="tel">
+          <label class="form-field">
             Телефон
             <svg class="icon">
               <use href="./images/icons/icons.svg#phone"></use>
             </svg>
             <input type="tel" name="tel" />
           </label>
-          <label class="form-field" for="email">
+          <label class="form-field">
             Пошта
             <svg class="icon">
               <use href="./images/icons/icons.svg#email"></use>
             </svg>
             <input type="email" name="email"
           /></label>
-          <label class="form-field" for="comment"
+          <label class="form-field comment"
             >Коментар
             <textarea
               name="comment"
@@ -631,14 +633,17 @@
               placeholder="Введіть текст"
             ></textarea>
           </label>
-          <div class="form-field agreement">
+          <label class="agreement-label">
             <input type="checkbox" class="checkbox" name="agreement" />
-            <p class="agreement-text">
-              Погоджуюся з розсилкою та приймаю
-              <a href="" class="agreement-link"> Умови договору</a>
-            </p>
-          </div>
-          <div class="for-my-button">
+            <span class="agreement-icon">
+              <svg class="icon">
+                <use href="./images/icons/icons.svg#check"></use>
+              </svg>
+            </span>
+            Погоджуюся з розсилкою та приймаю
+            <a href="" class="agreement-link"> Умови договору</a>
+          </label>
+          <div class="form-button">
             <button class="button order-button" type="submit">
               Відправити
             </button>

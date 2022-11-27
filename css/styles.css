@@ -74,9 +74,11 @@ html {
   width: 18px;
   height: 18px;
   transform: translate(-50%, -50%);
+  transition-property: fill;
 }
 .form-field:focus-within .icon {
   fill: var(--accent-color);
+  transition: var(--std-timing) var(--std-time-func);
 }
 
 .form-field {
@@ -87,17 +89,24 @@ html {
   margin-bottom: 10px;
 }
 .form-field input,
-textarea {
+textarea,
+.subscribe input {
+  outline: unset;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition-property: border-color;
 }
 .form-field input:focus,
-textarea:focus {
-  outline: unset;
+textarea:focus,
+.subscribe input:focus {
   border-color: var(--accent-color);
+  transition: var(--std-timing) var(--std-time-func);
 }
 .form-field label {
   margin-bottom: 4px;
+}
+.form-field.comment {
+  margin-bottom: 20px;
 }
 .form-field input {
   padding-right: 12px;
@@ -105,25 +114,66 @@ textarea:focus {
   padding-bottom: 11px;
   padding-left: 32px;
 }
-.form-field.agreement {
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 30px;
-}
-.agreement-text {
-  margin: 0 0 0 7px;
-}
-.agreement-link {
-  text-decoration: none;
-  color: var(--accent-color);
-  border-bottom: 1px solid var(--accent-color);
-}
 textarea {
   width: 100%;
   min-height: 120px;
   resize: none;
   padding: 12px 16px;
+}
+.agreement-link {
+  margin-left: 5px;
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+.agreement-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  user-select: none;
+  cursor: pointer;
+}
+.agreement-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+.agreement-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  color: var(--primary-white-color);
+  border: 2px solid var(--secondary-text-color);
+  border-radius: 4px;
+  transition-property: color, border-color, background-color;
+}
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.checkbox:focus + .agreement-icon {
+  border-color: var(--accent-color);
+  transition: var(--std-timing) var(--std-time-func);
+}
+.checkbox:checked + .agreement-icon {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  transition: var(--std-timing) var(--std-time-func);
+}
+.agreement-icon > .icon {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
 }
 .close-btn {
   position: absolute;
@@ -135,10 +185,6 @@ textarea {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--primary-white-color);
-
-  /* background-image: url(../images/icons/close-black-18dp.svg);
-  background-position: center;
-  background-repeat: no-repeat; */
   transition-property: color;
   transition: var(--std-timing) var(--std-time-func);
 }
@@ -161,19 +207,12 @@ textarea {
   cursor: pointer;
   color: var(--accent-color);
 }
-.for-my-button {
+.form-button {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.checkbox {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+
 body {
   font-family: "Roboto", Verdana, sans-serif;
   font-size: 14px;
@@ -685,24 +724,26 @@ img {
   align-items: center;
   margin-left: 12px;
   padding: 10px 28px;
+  border: none;
 }
 .subscribe-div {
   margin-left: auto;
 }
-.form-field.subscribe {
+.subscribe-sub-div {
   display: flex;
   align-items: center;
-  flex-direction: row;
+  justify-content: center;
 }
-.form-field.subscribe [type="email"] {
-  margin-left: auto;
+.subscribe [type="email"] {
   width: 358px;
   height: 50px;
   padding: 15px 16px;
+  color: var(--primary-white-color);
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  transition-property: border-color;
 }
 .order-button .icon {
   margin-left: 10px;
