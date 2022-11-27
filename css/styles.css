@@ -658,13 +658,12 @@ img {
 }
 /* -----------------------footer----------------------- */
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-
   background-color: #2f303a;
 }
 .footer .container {
   display: flex;
+  padding-top: 60px;
+  padding-bottom: 30px;
 }
 .container.footer {
   display: flex;
